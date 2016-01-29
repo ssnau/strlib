@@ -35,6 +35,8 @@ function merge(a, b, needle) {
   var end_a = a.slice(-len);
   var start_b = b.slice(0, len);
   if (end_a === start_b) return a.slice(-len) + b;
+  if (end_a === needle) a = a.slice(0, -len); 
+  if (start_b === needle) b = b.slice(0, len); 
   return a + needle +  b;
 }
 

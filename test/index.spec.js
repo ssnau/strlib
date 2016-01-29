@@ -25,6 +25,12 @@ describe("merge", function () {
      var b = "catcat is lonely";
      assert(merge(a, b), "i like catcat is lonely");
    });
+   
+   it('bunch test', function () {
+     var a = "http://abc/"
+     var b = "efg";
+     assert(merge(a, b, '/'), "http://abc/efg");
+   });
 });
 
 

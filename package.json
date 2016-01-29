@@ -10,5 +10,18 @@
     "test": "mocha"
   },
   "author": "ssnau",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssnau/strlib.git"
+  },
+  "keywords": [
+    "string",
+    "lib",
+    "libarary"
+  ],
+  "bugs": {
+    "url": "https://github.com/ssnau/strlib/issues"
+  },
+  "homepage": "https://github.com/ssnau/strlib#readme"
 }
