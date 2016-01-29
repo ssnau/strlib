@@ -1,0 +1,14 @@
+{
+  "name": "strlib",
+  "version": "1.0.0",
+  "description": "string util function library",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "ssnau",
+  "license": "MIT"
+}
