@@ -1,6 +1,6 @@
 {
   "name": "strlib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "string util function library",
   "main": "index.js",
   "directories": {
