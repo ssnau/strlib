@@ -12,6 +12,7 @@ describe("merge", function () {
      var a = "http://example.com/"
      var b = "/foo/bar";
      assert.equal(merge(a, b), "http://example.com/foo/bar");
+
    });
 
    it('should auto merge string by string', function () {
@@ -30,6 +31,14 @@ describe("merge", function () {
      var a = "http://abc/"
      var b = "efg";
      assert.equal(merge(a, b, '/'), "http://abc/efg");
+
+     var a = "http://example.com/"
+     var b = "foo/bar";
+     assert.equal(merge(a, b, '/'), "http://example.com/foo/bar");
+
+     var a = "http://example.com"
+     var b = "/foo/bar";
+     assert.equal(merge(a, b, '/'), "http://example.com/foo/bar");
    });
 });
 

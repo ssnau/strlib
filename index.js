@@ -39,7 +39,7 @@ function merge(a, b, needle) {
   var start_b = b.slice(0, len);
   if (end_a === start_b) return a.slice(0, -len) + b;
   if (end_a === needle) a = a.slice(0, -len); 
-  if (start_b === needle) b = b.slice(0, len); 
+  if (start_b === needle) b = b.slice(len);
   return a + needle +  b;
 }
 
