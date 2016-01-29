@@ -22,7 +22,9 @@ function replaceAll(string, find, replace) {
 function getConcatationString(stra, strb) {
   for (var i = strb.length; i > 0; i--) {
     var end = strb.slice(0, i);
-    if (stra.lastIndexOf(end) === stra.length - end.length) return end;
+    var lastIndex = stra.lastIndexOf(end);
+    if (lastIndex === -1) continue;
+    if (lastIndex === stra.length - end.length) return end;
   }
   return '';
 }
@@ -30,11 +32,12 @@ function getConcatationString(stra, strb) {
 function merge(a, b, needle) {
   if (typeof needle === 'undefined') {
     needle = getConcatationString(a, b); // auto compute
+    if (!needle) return a + b;
   }
   var len = needle.length;
   var end_a = a.slice(-len);
   var start_b = b.slice(0, len);
-  if (end_a === start_b) return a.slice(-len) + b;
+  if (end_a === start_b) return a.slice(0, -len) + b;
   if (end_a === needle) a = a.slice(0, -len); 
   if (start_b === needle) b = b.slice(0, len); 
   return a + needle +  b;
