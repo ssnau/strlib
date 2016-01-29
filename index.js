@@ -35,7 +35,7 @@ function merge(a, b, needle) {
   var end_a = a.slice(-len);
   var start_b = b.slice(0, len);
   if (end_a === start_b) return a.slice(-len) + b;
-  return a + b;
+  return a + needle +  b;
 }
 
 module.exports = {
@@ -43,5 +43,6 @@ module.exports = {
   escapeHTML: escapeHTML,
   escapeRegExp: escapeRegExp,
   replaceAll: replaceAll,
-  getConcatationString: getConcatationString
+  getConcatationString: getConcatationString,
+  ucfirst: ucfirst
 }
